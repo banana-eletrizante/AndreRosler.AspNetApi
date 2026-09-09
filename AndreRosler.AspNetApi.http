@@ -1,0 +1,33 @@
+﻿@AndreRosler.AspNetApi_HostAddress = https://localhost:7xxx
+
+### Register
+POST {{AndreRosler.AspNetApi_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "demo@example.com",
+  "password": "Secret1"
+}
+
+### Login
+POST {{AndreRosler.AspNetApi_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "demo@example.com",
+  "password": "Secret1"
+}
+
+### List tasks
+GET {{AndreRosler.AspNetApi_HostAddress}}/api/tasks
+
+### Create task
+POST {{AndreRosler.AspNetApi_HostAddress}}/api/tasks
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Buy milk",
+  "description": "2 liters",
+  "isDone": false
+}
